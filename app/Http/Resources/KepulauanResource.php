@@ -15,7 +15,7 @@ class KepulauanResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
+            'kepulauan_id' => $this->kepulauan_id,
             'no_kepulauan' => $this->no_kepulauan,
             'nama' => $this->nama,
             'slug' => $this->slug,
