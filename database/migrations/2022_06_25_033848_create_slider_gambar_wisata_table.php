@@ -24,9 +24,6 @@ class CreateSliderGambarWisataTable extends Migration
                 ->references('wisata_id')
                 ->on('wisata')
                 ->cascadeOnDelete();
-            $table->timestamp('dibuat_pada');
-            $table->timestamp('diubah_pada');
-            $table->timestamp('dihapus_pad');
         });
     }
 

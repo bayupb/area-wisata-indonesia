@@ -30,9 +30,6 @@ class CreateKabupatenTable extends Migration
                 ->references('provinsi_id')
                 ->on('provinsi')
                 ->cascadeOnDelete();
-            $table->timestamp('dibuat_pada');
-            $table->timestamp('diubah_pada');
-            $table->timestamp('dihapus_pad');
         });
     }
 

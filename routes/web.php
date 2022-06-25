@@ -16,3 +16,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->group(['prefix' => 'indonesia'], function () use ($router) {
+        // kepulauan
+        $router->group(['prefix' => 'kepulauan'], function () use ($router) {
+            $router->get('/', 'KepulauanController@getListData');
+            $router->post('/simpan', 'KepulauanController@getPostList');
+        });
+    });
+});

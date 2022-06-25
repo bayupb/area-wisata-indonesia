@@ -24,9 +24,6 @@ class CreateProvinsiTable extends Migration
                 ->references('kepulauan_id')
                 ->on('kepulauan')
                 ->cascadeOnDelete();
-            $table->timestamp('dibuat_pada');
-            $table->timestamp('diubah_pada');
-            $table->timestamp('dihapus_pad');
         });
     }
 

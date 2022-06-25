@@ -48,9 +48,6 @@ class CreateBudayaTable extends Migration
                 ->references('daerah_id')
                 ->on('daerah')
                 ->cascadeOnDelete();
-            $table->timestamp('dibuat_pada');
-            $table->timestamp('diubah_pada');
-            $table->timestamp('dihapus_pad');
         });
     }
 

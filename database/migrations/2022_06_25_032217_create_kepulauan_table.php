@@ -18,9 +18,6 @@ class CreateKepulauanTable extends Migration
             $table->string('no_kepulauan');
             $table->string('nama');
             $table->string('slug');
-            $table->timestamp('dibuat_pada');
-            $table->timestamp('diubah_pada');
-            $table->timestamp('dihapus_pad');
         });
     }
 
