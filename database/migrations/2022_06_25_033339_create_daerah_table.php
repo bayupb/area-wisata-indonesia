@@ -19,14 +19,14 @@ class CreateDaerahTable extends Migration
             $table->string('nama');
             $table->string('slug');
 
-            $table->unsignedBigInteger('kepulauan_id');
+            $table->unsignedBigInteger('kawasan_id');
             $table
-                ->foreign('kepulauan_id')
-                ->references('kepulauan_id')
-                ->on('kepulauan')
+                ->foreign('kawasan_id')
+                ->references('kawasan_id')
+                ->on('kawasan')
                 ->cascadeOnDelete();
-            $table->unsignedBigInteger('provinsi_id');
 
+            $table->unsignedBigInteger('provinsi_id');
             $table
                 ->foreign('provinsi_id')
                 ->references('provinsi_id')

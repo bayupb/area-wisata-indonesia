@@ -12,19 +12,26 @@ class KabupatenModel extends Model
 
     public function getProvinsi()
     {
-        return $this->belongsTo('App\Models\ProvinsiModel', 'provinsi_id');
+        return $this->belongsTo(
+            'App\Models\ProvinsiModel',
+            'provinsi_id',
+            'provinsi_id'
+        );
+    }
+    public function getKawasan()
+    {
+        return $this->belongsTo(
+            'App\Models\KawasanModel',
+            'kawasan_id',
+            'kawasan_id'
+        );
     }
     public function getDaerah()
     {
-        return $this->hasMany('App\Models\DaerahModel', 'provinsi_id');
+        return $this->hasMany(
+            'App\Models\DaerahModel',
+            'daerah_id',
+            'daerah_id'
+        );
     }
-
-    // public function kota()
-    // {
-    //     return $this->belongsTo(
-    //         'App\Models\indonesia\KotaModel',
-    //         'kota_id',
-    //         'kota_id'
-    //     );
-    // }
 }

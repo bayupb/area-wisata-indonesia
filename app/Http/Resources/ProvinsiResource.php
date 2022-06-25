@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class KepulauanResource extends JsonResource
+class ProvinsiResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,10 +15,13 @@ class KepulauanResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'kepulauan_id' => $this->kepulauan_id,
-            'no_kepulauan' => $this->no_kepulauan,
+            'provinsi_id' => $this->provinsi_id,
+            'no_provinsi' => $this->no_provinsi,
             'nama' => $this->nama,
             'slug' => $this->slug,
+            'kawasan_id' => $this->kawasan_id,
+            'kawasan' => $this->getKawasan->nama,
+            'kawasan_detail' => $this->getKawasan,
         ];
     }
 }

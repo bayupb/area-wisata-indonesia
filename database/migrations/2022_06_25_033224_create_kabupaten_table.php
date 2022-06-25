@@ -18,11 +18,11 @@ class CreateKabupatenTable extends Migration
             $table->string('no_kabupaten');
             $table->string('nama');
             $table->string('slug');
-            $table->unsignedBigInteger('kepulauan_id');
+            $table->unsignedBigInteger('kawasan_id');
             $table
-                ->foreign('kepulauan_id')
-                ->references('kepulauan_id')
-                ->on('kepulauan')
+                ->foreign('kawasan_id')
+                ->references('kawasan_id')
+                ->on('kawasan')
                 ->cascadeOnDelete();
             $table->unsignedBigInteger('provinsi_id');
             $table

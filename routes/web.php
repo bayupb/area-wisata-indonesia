@@ -19,10 +19,39 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->group(['prefix' => 'indonesia'], function () use ($router) {
-        // kepulauan
-        $router->group(['prefix' => 'kepulauan'], function () use ($router) {
-            $router->get('/', 'KepulauanController@getListData');
-            $router->post('/simpan', 'KepulauanController@getPostList');
+        // kawasan
+        $router->group(['prefix' => 'kawasan'], function () use ($router) {
+            $router->get('/', 'KawasanController@getListData');
+            $router->post('/simpan', 'KawasanController@getPostList');
+            $router->get('/q', 'KawasanController@getSearchData');
+        });
+
+        // provinsi
+        $router->group(['prefix' => 'provinsi'], function () use ($router) {
+            $router->get('/', 'ProvinsiController@getListData');
+            $router->post('/simpan', 'ProvinsiController@getPostList');
+            $router->get('/q', 'ProvinsiController@getSearchData');
+        });
+
+        // kabupaten
+        $router->group(['prefix' => 'kabupaten'], function () use ($router) {
+            $router->get('/', 'KabupatenController@getListData');
+            $router->post('/simpan', 'KabupatenController@getPostList');
+            $router->get('/q', 'KabupatenController@getSearchData');
+        });
+
+        // daerah
+        $router->group(['prefix' => 'daerah'], function () use ($router) {
+            $router->get('/', 'DaerahController@getListData');
+            $router->post('/simpan', 'DaerahController@getPostList');
+            $router->get('/q', 'DaerahController@getSearchData');
+        });
+
+        // wisata
+        $router->group(['prefix' => 'daerah'], function () use ($router) {
+            $router->get('/', 'DaerahController@getListData');
+            $router->post('/simpan', 'DaerahController@getPostList');
+            $router->get('/q', 'DaerahController@getSearchData');
         });
     });
 });

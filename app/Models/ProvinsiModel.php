@@ -10,13 +10,21 @@ class ProvinsiModel extends Model
     protected $primaryKey = 'provinsi_id';
     public $timestamps = false;
 
-    public function getKepulauan()
+    public function getKawasan()
     {
-        return $this->belongsTo('App\Models\KepulauanModel', 'provinsi_id');
+        return $this->belongsTo(
+            'App\Models\KawasanModel',
+            'kawasan_id',
+            'kawasan_id'
+        );
     }
 
     public function getDaerah()
     {
-        return $this->hasMany('App\Models\DaerahModel', 'provinsi_id');
+        return $this->hasMany(
+            'App\Models\DaerahModel',
+            'deaerah_id',
+            'daerah_id'
+        );
     }
 }

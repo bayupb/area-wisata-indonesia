@@ -22,8 +22,12 @@ class BudayaModel extends Model
     {
         return $this->belongsTo('App\Models\KabupatenModel', 'kabupaten_id');
     }
-    public function getKepulauan()
+    public function getKawasan()
     {
-        return $this->belongsTo('App\Models\KepulauanModel', 'kepulauan_id');
+        return $this->belongsTo(
+            'App\Models\KawasanModel',
+            'kawasan_id',
+            'kawasan_id'
+        );
     }
 }

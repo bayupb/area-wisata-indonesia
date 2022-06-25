@@ -21,11 +21,11 @@ class CreateBudayaTable extends Migration
             $table->string('gambar');
             $table->text('deskripsi');
             $table->string('kode_pos');
-            $table->unsignedBigInteger('kepulauan_id');
+            $table->unsignedBigInteger('kawasan_id');
             $table
-                ->foreign('kepulauan_id')
-                ->references('kepulauan_id')
-                ->on('kepulauan')
+                ->foreign('kawasan_id')
+                ->references('kawasan_id')
+                ->on('kawasan')
                 ->cascadeOnDelete();
             // provinsi
             $table->unsignedBigInteger('provinsi_id');

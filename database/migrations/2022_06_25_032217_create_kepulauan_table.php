@@ -13,9 +13,9 @@ class CreateKepulauanTable extends Migration
      */
     public function up()
     {
-        Schema::create('kepulauan', function (Blueprint $table) {
-            $table->bigIncrements('kepulauan_id');
-            $table->string('no_kepulauan');
+        Schema::create('kawasan', function (Blueprint $table) {
+            $table->bigIncrements('kawasan_id');
+            $table->string('no_kawasan');
             $table->string('nama');
             $table->string('slug');
         });
