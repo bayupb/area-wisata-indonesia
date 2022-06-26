@@ -38,7 +38,9 @@ class KawasanRepository
     {
         try {
             // ambil data dari Resources
-            $data = KawasanResource::collection(KawasanModel::get());
+            $data = KawasanResource::collection(
+                KawasanModel::with('getProvinsi.getKabupaten.getDaerah')->get()
+            );
 
             // response berhasil menggunakan App\ResponseHelpers
             return ResponseHelpers::ResponseSuccess(

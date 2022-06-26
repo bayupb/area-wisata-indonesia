@@ -73,10 +73,6 @@ $app->configure('cors');
 
 $app->middleware([Fruitcake\Cors\HandleCors::class]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
-
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -93,7 +89,6 @@ $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 $app->register(Fruitcake\Cors\CorsServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
-
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes

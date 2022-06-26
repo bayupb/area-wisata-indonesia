@@ -19,6 +19,7 @@ class KawasanResource extends JsonResource
             'no_kawasan' => $this->no_kawasan,
             'nama' => $this->nama,
             'slug' => $this->slug,
+            'get_provinsi' => $this->getProvinsi,
         ];
     }
 }

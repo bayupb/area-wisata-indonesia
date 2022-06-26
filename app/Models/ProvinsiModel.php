@@ -19,6 +19,15 @@ class ProvinsiModel extends Model
         );
     }
 
+    public function getKabupaten()
+    {
+        return $this->hasMany(
+            'App\Models\KawasanModel',
+            'kawasan_id',
+            'kawasan_id'
+        );
+    }
+
     public function getDaerah()
     {
         return $this->hasMany(

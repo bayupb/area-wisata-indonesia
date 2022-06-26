@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class KawasanModel extends Model
 {
@@ -13,6 +14,10 @@ class KawasanModel extends Model
     public function getProvinsi()
     {
         return $this->hasMany('App\Models\ProvinsiModel', 'provinsi_id');
+    }
+    public function getKabupaten()
+    {
+        return $this->hasMany('App\Models\KabupatenModel', 'kabupaten_id');
     }
 
     public function getDaerah()
